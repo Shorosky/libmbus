@@ -1973,6 +1973,7 @@ mbus_unit_prefix(int exp)
 {
     static char buff[256];
 
+    /*
     switch (exp)
     {
         case 0:
@@ -2018,6 +2019,8 @@ mbus_unit_prefix(int exp)
         default:
             snprintf(buff, sizeof(buff), "1e%d ", exp);
     }
+    */
+    snprintf(buff, sizeof(buff), "1e%d ", exp);
 
     return buff;
 }
